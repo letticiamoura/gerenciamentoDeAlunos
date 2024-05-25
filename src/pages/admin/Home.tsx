@@ -81,16 +81,16 @@ export default function Home() {
            
            <div className="p-5 flex justify-between">
 
-                <h2 className="p-5 text-4xl font-extrabold text-slate-950/50">Alunos Cadastrados</h2>
+                <h2 className="p-5 text-3xl md:text-4xl font-extrabold text-slate-950/50">Alunos Cadastrados</h2>
 
                 <button onClick={handleOpenModal}>
                 <img className="hover:scale-110" width="60" height="50" src="https://img.icons8.com/ios-filled/100/000630/add--v1.png" alt="add--v1"/>
                 </button>
 
-                <div className="absolute z-40 top-[17vh] left-[25vw]">
+                <div className="absolute w-[90vw] left-[5vw] z-40 top-[17vh] md:left-[10vw]">
 
                     {open &&
-                        <form className="pt-10 flex flex-col m-auto items-center border w-[50vw] overflow-x-auto bg-slate-950 rounded-lg" onSubmit={handleSubmit}>
+                        <form className="pt-10 flex flex-col m-auto items-center border w-full md:w-[50vw] overflow-x-auto bg-slate-950 rounded-lg" onSubmit={handleSubmit}>
 
                             <div className="flex justify-between items-center gap-[30vw]">
                                 <h2 className="text-4xl font-extrabold text-slate-200">Cadastro</h2>
@@ -98,24 +98,24 @@ export default function Home() {
                             </div>
 
                             <label htmlFor="name" className="text-lg font-semibold text-slate-500/50">Nome <br />
-                                <input value={newStudent.name} onChange={handleInputChange} className="bg-slate-600 text-slate-900 rounded-xl pl-5 w-[25vw] text-lg outline-none" id="name" type="text" placeholder="Ex: Alex Silva" title="Digite o nome do aluno"/>
+                                <input value={newStudent.name} onChange={handleInputChange} className="bg-slate-600 text-slate-900 rounded-xl pl-5 w-full md:w-[25vw] text-lg outline-none p-2 md:p-1" id="name" type="text" placeholder="Ex: Alex Silva" title="Digite o nome do aluno"/>
                             </label>
 
                             <label htmlFor="matricula" className="text-lg font-semibold text-slate-500/50">Matrícula <br />
-                                <input value={newStudent.matricula} onChange={handleInputChange} className="bg-slate-600 p-1 rounded-xl pl-5 w-[25vw] text-lg outline-none" id="matricula" type="text" placeholder="Ex: 1234..." title="Digite a matrícula..."/>
+                                <input value={newStudent.matricula} onChange={handleInputChange} className="bg-slate-600 rounded-xl pl-5 w-full md:w-[25vw] text-lg outline-none p-2 md:p-1" id="matricula" type="text" placeholder="Ex: 1234..." title="Digite a matrícula..."/>
                             </label>
 
                             <label htmlFor="cpf" className="text-lg font-semibold text-slate-500/50">CPF <br />
-                                <input value={newStudent.cpf} onChange={handleInputChange} className="bg-slate-600 p-1 rounded-xl pl-5 w-[25vw] text-lg outline-none" id="cpf" type="text" placeholder="XXX.XXX.XXX-XX" title="Digite o cpf..."/>
+                                <input value={newStudent.cpf} onChange={handleInputChange} className="bg-slate-600 rounded-xl pl-5 w-full md:w-[25vw] text-lg outline-none p-2 md:p-1" id="cpf" type="text" placeholder="XXX.XXX.XXX-XX" title="Digite o cpf..."/>
                             </label>
 
                             <label htmlFor="date" className="text-lg font-semibold text-slate-500/50">Data de nascimento <br /> 
-                                <input value={newStudent.dataNasc} onChange={handleInputChange} className="bg-slate-600 p-1 rounded-xl pl-5 w-[25vw] text-lg outline-none" type="date" name="date" id="date" title="Digite a data de nascimento" />
+                                <input value={newStudent.dataNasc} onChange={handleInputChange} className="bg-slate-600 rounded-xl pl-5 w-[57vw] md:w-[25vw] text-lg outline-none p-2 md:p-1" type="date" name="date" id="date" title="Digite a data de nascimento" />
                             </label>
 
                             <label htmlFor="curso" className="text-lg font-semibold text-slate-500/50">Curso <br /> 
-                                <select value={newStudent.curso} onChange={handleInputChange} className="bg-slate-600 p-1 rounded-xl pl-5 w-[25vw] text-lg outline-none" name="curso" id="curso">
-                                    <option value="x" className="text-slate-400">Selecione uma opção</option>
+                                <select value={newStudent.curso} onChange={handleInputChange} className="bg-slate-600 rounded-xl pl-5 w-[57vw] md:w-[25vw] text-lg outline-none p-2 md:p-1" name="curso" id="curso">
+                                    <option value="x" className="w-[20vw] text-slate-200">Selecione uma opção</option>
                                     <option value="Administração">Administração</option>
                                     <option value="ADS">Análise e Desenvolvimento de Sistemas</option>
                                     <option value="economia">Ciências Econômicas</option>
@@ -124,7 +124,7 @@ export default function Home() {
                             </label>
 
                             <div className="p-5">
-                                <button className="p-2 rounded-xl bg-slate-400 hover:scale-110">Cadastrar</button>
+                                <button className="w-[30vw] md:w-[10vw] p-2 rounded-xl bg-slate-400 hover:scale-110">Cadastrar</button>
                             </div>
 
                         </form>
@@ -134,7 +134,7 @@ export default function Home() {
 
            </div>
 
-           <div>
+           <div className="overflow-x-auto">
 
                 <table className="border m-auto w-[60vw] bg-slate-600/50">
                     <thead className="h-[7vh] text-slate-200 bg-slate-950">

@@ -4,6 +4,7 @@ import edit from "../../assets/edit.png";
 import remove from "../../assets/remove.png";
 import Header from "../../layout/Header";
 import Footer from "../../layout/Footer";
+import List from "./List";
 
 type Student = {
     id: number;
@@ -170,7 +171,10 @@ export default function Home() {
                 </table>
            </div>
 
+        <List />
+
            <Footer />
+
         </div>
     )
 }
